@@ -49,7 +49,7 @@ class AppSettings(BaseSettings):
         logger.configure(handlers=[{"sink": sys.stderr, "level": self.logging_level}])
 
     class Config:
-        env_file = '.env'
+        env_file = '.env.example'
         env_file_encoding = 'utf-8'
 
 
