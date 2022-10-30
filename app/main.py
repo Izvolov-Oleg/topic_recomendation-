@@ -7,7 +7,7 @@ from app.api.routes import router as api_router
 
 
 def get_application() -> FastAPI:
-    # sentry_sdk.init(dsn=settings.sentry_dsn)
+    sentry_sdk.init(dsn=settings.sentry_dsn)
 
     settings.configure_logging()
 

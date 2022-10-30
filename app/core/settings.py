@@ -19,7 +19,7 @@ class AppSettings(BaseSettings):
 
     api_prefix: str = ""
 
-    sentry_dsn: str
+    sentry_dsn: str = ""
     database_path: str
 
     server_host: str = "127.0.0.1"
