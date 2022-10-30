@@ -23,4 +23,4 @@ RUN mkdir /data && curl -L $DATA_URL --output /data/reddit_embeddings.pickle
 
 ENV DATABASE_PATH /data/reddit_embeddings.pickle
 
-CMD uvicorn app.main:app --host=0.0.0.0 --port=8000 --reload
+CMD uvicorn app.main:app --host=0.0.0.0 --port=8000 --reload --worker=2

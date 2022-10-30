@@ -22,7 +22,7 @@ class AppSettings(BaseSettings):
     sentry_dsn: str = ""
     database_path: str
 
-    server_host: str = "127.0.0.1"
+    server_host: str = "0.0.0.0"
     server_port: int = 8000
 
     logging_level: int = logging.INFO
