@@ -9,4 +9,3 @@ def timer(name: str) -> None:
     yield
     total_time = time.time() - t0
     logger.info(f"{name} exec time: {total_time:.3f}s")
-

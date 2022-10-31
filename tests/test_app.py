@@ -8,11 +8,11 @@ client = TestClient(app)
 url = "/respond"
 
 request_data = [
-        {
-            "active_skills": [["dff_friendship_skill", "dff_friendship_skill", "dff_music_skill"]],
-            "cobot_topics": [["Phatic", "Phatic", "Phatic", "Music", "Phatic"]],
-        }
-    ]
+    {
+        "active_skills": [["dff_friendship_skill", "dff_friendship_skill", "dff_music_skill"]],
+        "cobot_topics": [["Phatic", "Phatic", "Phatic", "Music", "Phatic"]],
+    }
+]
 
 expected_results = [["dff_gossip_skill", "dff_movie_skill"]]
 
@@ -41,4 +41,3 @@ def test_respond_many():
         response = client.post(url, json=data)
         assert response.status_code == 200
         assert response.json()[0] == result
-
